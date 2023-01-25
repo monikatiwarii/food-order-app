@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 543px;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.noodleTown{
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 80px;
+    top: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFC300;
+}
+.menu{
+    position: absolute;
+    width: 56px;
+    height: 30px;
+    left: 1474px;
+    top: 26px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+
+.cart{
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    left: 1633px;
+    top: 45px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.heading{
+    position: absolute;
+    width: 348px;
+    height: 72px;
+    left: 738px;
+    top: 215px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 72px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.headingDescription{
+    position: absolute;
+    width: 370px;
+    height: 36px;
+    left: 730px;
+    top: 300px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.searchBar{
+    display: flex;
+    position: absolute;
+    width: 642px;
+    height: 65px;
+    left: 585px;
+    top: 410px;
+    background: #D9D9D9;
+    border-radius: 8px;
+}
+.cityText{
+position: absolute;
+width: 53px;
+height: 30px;
+left: 568px;
+top: 402px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+text-transform: capitalize;
+color: #000000;
+}
+.downArrow{
+position: absolute;
+left: 29.76%;
+right: 23.51%;
+top: 42.25%;
+bottom: 31.27%;
+
+background: #999999;
+}
+
+.foodCards{
+    position: relative;
+    width: 343px;
+    height: 200px;
+    top: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.cardHeading{
+    position: absolute;
+    left: 10px;
+    top: 105px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: capitalize; 
+    color: #000000;
+}
+.cardPara{
+    position: absolute;
+    left: 10px;
+    top: 148px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.typography{ 
+    padding-left: 201px;
+    padding-top: 80px;
+    margin-bottom: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 72px;
+    color: #FFC200;
+}
+.typographyPara{
+    margin-top: 0;
+    padding-left: 201px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: #000000;
+}
+.ellipseImgContainer{
+    display: flex;
+    padding-top: 100px;
+    padding-left: 201px;
+}
+.ellipseName{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.popularRecipe{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: #000000;
+}
+.menuButtons{
+    margin-left: 20px;
+    width: 161px;
+    height: 67px;
+    background: linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1;
+    border-radius: 45px;
+    border: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: black;
+}
+.pizzaCards{
+    position: relative;
+    box-sizing: border-box;
+    width: 310px;
+    height: 493px;
+    background: #FFFFFF;
+    border: 2px solid #ECEEF7;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+
+.pizzaImg{
+    width: 204px;
+    height: 208px;
+    padding-top: 43px;
+    padding-left: 53px;
+    filter: drop-shadow(20px 10px 20px rgba(143, 92, 32, 0.1)) drop-shadow(10px 5px 10px rgba(143, 92, 32, 0.1));
+}
+.pizzaName{
+    padding-left: 18.5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000; 
+    margin-bottom: 0px; 
+}
+.pizzaTime{  
+    padding-top: 14px;
+    padding-left: 121px; 
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: right;
+    color: #000000;
+}
+.pizzaIngredient{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding-left: 18.5px;
+    margin-top: 0px;
+}
+
+.pizzaWeight{
+    padding-top: 20px;
+    height: 41px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #121146;
+}
+
+.spikes{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-bottom: 2px solid #ECEEF7;
+    border-right: 2px solid #ECEEF7;
+    border-bottom-right-radius: 15px;
+    top : 100%;
+    left : 50%;
+    margin-left: -25px;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: -25px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+.pizzaCardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 660px;
+
+    max-width: 155%;
+    overflow-x: scroll;
+    text-align: center;
+}::-webkit-scrollbar { 
+    display: none;  
+}
+.popular{
+    position: absolute;
+    left: 22px;
+    top : 4px;
+    width: 60px;
+    height: 20px;
+    background: #191F2C;
+    color: #FFFFFF;
+    padding: 6px;
+    box-shadow: 0px 4px 8px rgba(25, 31, 44, 0.25);
+    border-radius: 3px;
+}
+.adDiv{
+    margin-top: 175px;   
+    width: 100%;
+    height: 538px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.adHeading{
+    position: absolute;
+    width: 575px;
+    height: 144px;
+    left: 234px;
+    top: 2745px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.foodDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 271px;
+}
+.foodAdHeading{
+    position: absolute;
+    width: 390px;
+    height: 192px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 96px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    z-index: 1;
+    top: 363%;
+    left: 22%;
+}
+.foodImages{
+    background: rgba(0, 0, 0, 0.4)
+}
