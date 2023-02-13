@@ -58,6 +58,9 @@ const Cuisines = () => {
           display: "flex",
           paddingTop: "100px",
           overflowX: "scroll",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
         }}
       >
         <Box>

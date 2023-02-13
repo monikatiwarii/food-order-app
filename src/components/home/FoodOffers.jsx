@@ -1,124 +1,117 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const FoodOffers = () => {
   return (
     <>
-      <Box
+      <Grid
+        container
+        spacing={1}
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "-80px",
-        }}
-      >
-        <Box
-          sx={{
-            width: {
-              xl: "635px",
-              lg: "545px",
-              md: "445px",
-              sm: "330px",
-              xs: "140px",
-            },
-          }}
-        >
-          <img
-            src="images/Rectangle14.png"
-            style={{
-              width: "100%",
-            }}
-            alt=""
-          />
-        </Box>
-
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            marginLeft: {
-              xl: "15px",
-              lg: "15px",
-              md: "15px",
-              sm: "15px",
-              xs: "5px",
-            },
-            gap: { xl: "15px", lg: "15px", md: "15px", sm: "15px", xs: "0px" },
-          }}
-        >
-          <Box
-            sx={{
-              width: {
-                xl: "635px",
-                lg: "545px",
-                md: "445px",
-                sm: "330px",
-                xs: "135px",
-              },
-            }}
-          >
-            <img
-              src="images/Rectangle15.png"
-              style={{
-                width: "100%",
-              }}
-              alt=""
-            />
-          </Box>
-          <Box
-            sx={{
-              width: {
-                xl: "635px",
-                lg: "545px",
-                md: "445px",
-                sm: "330px",
-                xs: "135px",
-              },
-            }}
-          >
-            <img
-              src="images/Rectangle16.png"
-              style={{
-                width: "100%",
-              }}
-              alt=""
-            />
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        sx={{
+          marginTop: {
+            xl: "150px",
+            lg: "100px",
+            md: "100px",
+            sm: "100px",
+            xs: "100px",
+          },
           position: "relative",
-          top: {
-            xl: "-420px",
-            lg: "-355px",
-            md: "-302px",
-            sm: "-236px",
-            // xs:'',
-          },
-          left: {
-            xl: "200px",
-            lg: "145px",
-            md: "45px",
-            sm: "45px",
-            // xs:'',
-          },
-          width: { xl: "390px", lg: "390px", md: "390px", sm: "265px" },
         }}
       >
-        <Typography
-          sx={{
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: 600,
-            fontSize: { xl: "64px", lg: "64px", md: "64px", sm: "48px" },
-            lineHeight: { xl: "110px", lg: "96px", md: "96px", sm: "65px" },
-            textTransform: "capitalize",
-            color: "#ffffff",
-          }}
-        >
-          Buy 2 Get 1 Free
-        </Typography>
-      </Box>
+        <Grid item sm={6} xs={6}>
+          <Box
+            sx={{
+              height: "100%",
+            }}
+          >
+            <Box
+              sx={{
+                height: "100%",
+              }}
+            >
+              <img
+                src="images/Rectangle14.png"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+                alt=""
+              />
+            </Box>
+            <Typography
+              sx={{
+                width: {
+                  xl: "500px",
+                  lg: "350px",
+                  md: "350px",
+                  sm: "350px",
+                  xs: "130px",
+                },
+                position: "absolute",
+                top: {
+                  xl: "238px",
+                  lg: "165px",
+                  md: "118px",
+                  sm: "118px",
+                  xs: "47px",
+                },
+                left: {
+                  xl: "50px",
+                  lg: "50px",
+                  md: "50px",
+                  sm: "50px",
+                  xs: "12px",
+                },
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: 600,
+                fontSize: {
+                  xl: "90px",
+                  lg: "64px",
+                  md: "50px",
+                  sm: "50px",
+                  xs: "20px",
+                },
+                lineHeight: {
+                  xl: "136px",
+                  lg: "96px",
+                  md: "75px",
+                  sm: "75px",
+                  xs: "30px",
+                },
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+              }}
+            >
+              Buy 2 Get 1 Free
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item sm={6} xs={6}>
+          <Grid container spacing={1}>
+            <Grid item sm={12} xs={12}>
+              <img
+                src="images/Rectangle15.png"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                alt=""
+              />
+            </Grid>
+            <Grid item sm={12} xs={12}>
+              <img
+                src="images/Rectangle16.png"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                alt=""
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   );
 };

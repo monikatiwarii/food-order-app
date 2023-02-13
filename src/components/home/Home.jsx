@@ -7,23 +7,27 @@ import FoodDeliveryImage from "./FoodDeliveryImage";
 import FoodOffers from "./FoodOffers";
 import FoodCollection from "./FoodCollection";
 import DownloadApp from "./DownloadApp";
+import AuthComponent from "../common/AuthComponent";
+import AuthGuard from "../common/AuthGuard";
 
 const Home = () => {
   return (
-    <>
-      <CoverImage />
-      <MaxWidthWrapper>
-        <DiningOut />
-        <Cuisines />
-      </MaxWidthWrapper>
-      <PopularRecipes />
-      <FoodDeliveryImage />
-      <MaxWidthWrapper>
-        <FoodOffers />
-        <FoodCollection />
-        <DownloadApp />
-      </MaxWidthWrapper>
-    </>
+    <AuthComponent>
+      <AuthGuard>
+        <CoverImage />
+        <MaxWidthWrapper>
+          <DiningOut />
+          <Cuisines />
+        </MaxWidthWrapper>
+        <PopularRecipes />
+        <FoodDeliveryImage />
+        <MaxWidthWrapper>
+          <FoodOffers />
+          <FoodCollection />
+          <DownloadApp />
+        </MaxWidthWrapper>
+      </AuthGuard>
+    </AuthComponent>
   );
 };
 

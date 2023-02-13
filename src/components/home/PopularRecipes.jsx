@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import classes from "./Home.module.css";
 import MaxWidthWrapper from "../common/MaxWidthWrapper";
 import { foodtype } from "../../data/data";
 import { useState } from "react";
@@ -88,134 +87,85 @@ const PopularRecipes = () => {
           }}
         >
           {foodtype.map((button) => {
-            if (button.name === "pizza") {
-              return (
-                <Button
-                  onClick={() => {
-                    foodItemHandler(button);
-                  }}
-                  sx={{
+            return (
+              <Button
+                onClick={() => {
+                  foodItemHandler(button);
+                }}
+                sx={{
+                  marginLeft: {
+                    xl: "20px",
+                    lg: "20px",
+                    md: "20px",
+                    sm: "20px",
+                    xs: "20px",
+                  },
+                  marginTop: "10px",
+                  width: {
+                    xl: "161px",
+                    lg: "161px",
+                    md: "161px",
+                    sm: "120px",
+                    xs: "120px",
+                  },
+                  height: {
+                    xl: "67px",
+                    lg: "67px",
+                    md: "67px",
+                    sm: "67px",
+                    xs: "50px",
+                  },
+                  backgroundColor: "#ECEEF6",
+                  borderRadius: "45px",
+                  border: "0px",
+                  fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  fontSize: {
+                    xl: "16px",
+                    lg: "16px",
+                    md: "16px",
+                    sm: "16px",
+                    xs: "12px",
+                  },
+                  lineHeight: "22px",
+                  textAlign: "center",
+                  color: "black",
+                  // "&:hover": {
+                  //   backgroundColor: "#F6B716",
+                  //   color: "white",
+                  // },
+                  // "&:active": {
+                  //   backgroundColor: "#F6B716",
+                  //   color: "white",
+                  // },
+                  "&:focus": {
                     backgroundColor: "#F6B716",
-                    width: {
-                      xl: "161px",
-                      lg: "161px",
-                      md: "161px",
-                      sm: "120px",
-                      xs: "120px",
-                    },
-                    height: {
-                      xl: "67px",
-                      lg: "67px",
-                      md: "67px",
-                      sm: "67px",
-                      xs: "50px",
-                    },
-                    marginTop: "5px",
-                    borderRadius: "45px",
-                    border: "0px",
-                    fontFamily: "Poppins",
                     color: "white",
-                    fontWeight: "600",
-                    "&:hover": {
-                      backgroundColor: "#F6B716",
-                      color: "white",
-                    },
-                  }}
-                >
-                  {button.name}
-                </Button>
-              );
-            } else {
-              return (
-                <Button
-                  onClick={() => {
-                    foodItemHandler(button);
-                  }}
-                  sx={{
-                    marginLeft: {
-                      xl: "20px",
-                      lg: "20px",
-                      md: "20px",
-                      sm: "20px",
-                      xs: "0px",
-                    },
-                    marginTop: "5px",
-                    width: {
-                      xl: "161px",
-                      lg: "161px",
-                      md: "161px",
-                      sm: "120px",
-                      xs: "120px",
-                    },
-                    height: {
-                      xl: "67px",
-                      lg: "67px",
-                      md: "67px",
-                      sm: "67px",
-                      xs: "50px",
-                    },
-                    background:
-                      "linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1",
-                    borderRadius: "45px",
-                    border: "0px",
-                    fontFamily: "Poppins",
-                    fontStyle: "normal",
-                    fontWeight: 600,
-                    fontSize: {
-                      xl: "16px",
-                      lg: "16px",
-                      md: "16px",
-                      sm: "16px",
-                      xs: "12px",
-                    },
-                    lineHeight: "22px",
-                    textAlign: "center",
-                    color: "black",
-                  }}
-                >
-                  {button.name}
-                </Button>
-              );
-            }
+                  },
+                }}
+              >
+                {button.name}
+              </Button>
+            );
           })}
         </Box>
       </MaxWidthWrapper>
-      <Box className={classes.pizzaCardContainer}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          height: "660px",
+          maxWidth: "155%",
+          overflowX: "scroll",
+          textAlign: "center",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
         {foodList.map((food, index) => {
-          const pizzaIconPending = {
-            position: "absolute",
-            height: "40px",
-            right: "133px",
-            top: "467px",
-            color: "white",
-            background: "#ffffff",
-            borderRadius: "59px",
-            border: "1px solid #ECEEF7",
-            zIndex: "2",
-          };
-          const pizzaIconDone = {
-            position: "absolute",
-            height: "40px",
-            right: "133px",
-            top: "467px",
-            color: "white",
-            background: "#F6B716",
-            boxShadow: "0px 4px 8px rgba(205, 71, 41, 0.26)",
-            borderRadius: "59px",
-            border: "0px",
-            zIndex: "2",
-          };
-          const pizzaIconAvailable = {
-            position: "absolute",
-            height: "40px",
-            right: "133px",
-            top: "467px",
-            color: "black",
-            background: "#FFFFFF",
-            borderRadius: "59px",
-            border: "1px solid #ECEEF7",
-            zIndex: "2",
-          };
           return (
             <Box
               sx={{
@@ -234,6 +184,17 @@ const PopularRecipes = () => {
                 marginLeft: "30px",
                 borderRadius: "20px",
                 padding: "20px",
+                "&:hover": {
+                  border: "2px solid  #F6B716;",
+                  "& #shoppingBag": {
+                    backgroundColor: " #F6B716;",
+                    color: "white",
+                  },
+                  "& #shoppingBagBorder": {
+                    borderBottom: "2px solid #F6B716",
+                    borderRight: "2px solid #F6B716",
+                  },
+                },
               }}
               style={{ marginTop: "115px" }}
             >
@@ -316,19 +277,63 @@ const PopularRecipes = () => {
               >
                 {food.items}
               </Typography>
-              <h2 className={classes.pizzaWeight}>{food.weight}</h2>
-              <button
-                style={
-                  food.shopping === "pending"
-                    ? pizzaIconPending
-                    : food.shopping === "done"
-                    ? pizzaIconDone
-                    : pizzaIconAvailable
-                }
+              <Typography
+                sx={{
+                  paddingTop: "20px",
+                  height: "41px",
+                  fontFamily: "Inter",
+                  fontStyle: "normal",
+                  fontWeight: 300,
+                  fontSize: "28px",
+                  lineHeight: "34px",
+                  textAlign: "center",
+                  color: "#121146",
+                }}
+              >
+                {food.weight}
+              </Typography>
+              <Button
+                id="shoppingBag"
+                sx={{
+                  position: "absolute",
+                  width: "34px",
+                  minWidth: "34px",
+                  right: {
+                    xl: "136px",
+                    lg: "136px",
+                    md: "136px",
+                    sm: "132px",
+                    xs: "104px",
+                  },
+                  top: "467px",
+                  color: "black",
+                  background: "#FFFFFF",
+                  borderRadius: "59px",
+                  border: "1px solid #ECEEF7",
+                  zIndex: "2",
+                }}
               >
                 <ShoppingBagIcon />
-              </button>
-              <Box className={classes.spikes}></Box>
+              </Button>
+              <Box
+                id="shoppingBagBorder"
+                sx={{
+                  position: "absolute",
+                  width: "50px",
+                  height: "50px",
+                  borderBottom: "2px solid #ECEEF7",
+                  borderRight: "2px solid #ECEEF7",
+                  borderBottomRightRadius: "15px",
+                  top: "100%",
+                  left: "50%",
+                  marginLeft: "-25px",
+                  content: `'""'`,
+                  transform: "rotate(45deg)",
+                  marginTop: "-25px",
+                  backgroundColor: "#FFFFFF",
+                  zIndex: 1,
+                }}
+              ></Box>
             </Box>
           );
         })}

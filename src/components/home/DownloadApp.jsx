@@ -5,23 +5,17 @@ const DownloadApp = () => {
     <>
       <Box
         sx={{
-          textAlign: "center",
-          position: "relative",
-          left: { xl: "135px", lg: "75px", md: "50px", sm: "50px", xs: "0px" },
-          top: {
-            xl: "-887px",
-            lg: "-700px",
-            md: "-500px",
-            sm: "-385px",
-            xs: "-425px",
-          },
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           width: {
             xl: "1296px",
             lg: "1180px",
-            md: "845px",
-            sm: "700px",
-            xs: "100%",
+            md: "740px",
+            sm: "540px",
+            xs: "300px",
           },
+          margin: "auto",
         }}
       >
         <img src="images/Frame3.png" style={{ width: "100%" }} alt="" />

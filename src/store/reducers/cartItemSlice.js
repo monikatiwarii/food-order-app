@@ -7,7 +7,6 @@ const cartItemSlices = createSlice({
   initialState: cartInitialState,
   reducers: {
     setCartData(state, action) {
-      console.log("action payload-----------", action.payload);
       let alreadyExist = state.getCartData.findIndex(
         (data) => data.id === action.payload.id
       );
@@ -26,6 +25,9 @@ const cartItemSlices = createSlice({
       state.getCartData = state.getCartData.filter(
         (item) => item.id !== action.payload.id
       );
+    },
+    clearCartData(state, action) {
+      return { ...state, getCartData: [] };
     },
   },
 });

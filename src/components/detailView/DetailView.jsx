@@ -2,11 +2,14 @@ import { Box, Divider, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Header from "../header/Header";
 import Button from "@mui/material/Button";
-import { menus, brandsData } from "../../data/data";
+import { brandsData } from "../../data/data";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartItemAction } from "../../store/reducers/cartItemSlice";
 import MaxWidthWrapper from "../common/MaxWidthWrapper";
+import DetailViewHeader from "./DetailViewHeader";
+import Menus from "./Menus";
+import AuthComponent from "../common/AuthComponent";
 
 const DetailView = () => {
   const dispatch = useDispatch();
@@ -42,19 +45,21 @@ const DetailView = () => {
   };
 
   const incrementItemCount = (data) => {
-    const updatedData = categoryWiseData.map((typedata) => {
-      if (typedata.id === data.id) {
-        typedata = {
-          ...typedata,
-          itemCount: data.itemCount + 1,
-        };
-        dispatch(cartItemAction.setCartData(typedata));
-      }
+    if (data.itemCount < 5) {
+      const updatedData = categoryWiseData.map((typedata) => {
+        if (typedata.id === data.id) {
+          typedata = {
+            ...typedata,
+            itemCount: data.itemCount + 1,
+          };
+          dispatch(cartItemAction.setCartData(typedata));
+        }
 
-      return typedata;
-    });
+        return typedata;
+      });
 
-    setCategoryWiseData(updatedData);
+      setCategoryWiseData(updatedData);
+    }
   };
 
   const decrementItemCount = (data) => {
@@ -74,87 +79,9 @@ const DetailView = () => {
   };
 
   return (
-    <>
+    <AuthComponent>
       <Header />
-      <Box
-        sx={{
-          display: "flex",
-          gap: { xl: "12px", lg: "12px", md: "12px", sm: "12px", xs: "5px" },
-          paddingTop: "20px",
-        }}
-      >
-        <Box
-          sx={{
-            width: {
-              xl: "56%",
-              lg: "63%",
-              md: "101%",
-              sm: "133%",
-              xs: "246%",
-            },
-            height: {
-              xl: "100%",
-              lg: "100%",
-            },
-          }}
-        >
-          <img
-            style={{
-              width: "100%",
-              height: "90%",
-            }}
-            src="images/Rectangle141.png"
-            alt=""
-          />
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: { xl: "8px", lg: "8px", md: "12px", sm: "5px", xs: "2px" },
-          }}
-        >
-          <Box
-            sx={{
-              width: {
-                xl: "100%",
-                lg: "100%",
-              },
-              height: {
-                xl: "100%",
-                lg: "98%",
-              },
-            }}
-          >
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              src="images/Rectangle151.png"
-              alt=""
-            />
-          </Box>
-          <Box
-            sx={{
-              width: {
-                xl: "100%",
-                lg: "100%",
-              },
-              height: { xl: "100%", lg: "93%" },
-            }}
-          >
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              src="images/Rectangle161.png"
-              alt=""
-            />
-          </Box>
-        </Box>
-      </Box>
+      <DetailViewHeader />
       <MaxWidthWrapper>
         <Box
           sx={{
@@ -336,8 +263,7 @@ const DetailView = () => {
                     sm: "12px",
                     xs: "10px",
                   },
-                  textAlign: "center",
-                  justifyContent: "flex-start",
+                  justifyContent: "center",
                   backgroundColor: "#FFC300",
                   marginTop: "10px",
                   color: "#ffffff",
@@ -368,8 +294,7 @@ const DetailView = () => {
                     sm: "14px",
                     xs: "10px",
                   },
-                  textAlign: "center",
-                  justifyContent: "flex-start",
+                  justifyContent: "center",
                   borderColor: "#FFC300",
                   marginTop: "10px",
                   color: "black",
@@ -401,7 +326,6 @@ const DetailView = () => {
                     sm: "12px",
                     xs: "10px",
                   },
-                  justifyContent: "flex-start",
                   borderColor: "#FFC300",
                   marginTop: "10px",
                   color: "black",
@@ -418,99 +342,7 @@ const DetailView = () => {
             </Box>
           </Box>
         </Box>
-        <Box>
-          <Typography
-            sx={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "24px",
-              lineHeight: "36px",
-              textTransform: "capitalize",
-              color: "#000000",
-              paddingLeft: {
-                xl: "368px",
-                lg: "250px",
-                md: "125px",
-                sm: "30px",
-                xs: "30px",
-              },
-              paddingTop: "80px",
-            }}
-          >
-            Menu
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              paddingLeft: {
-                xl: "368px",
-                lg: "250px",
-                md: "125px",
-                sm: "30px",
-                xs: "30px",
-              },
-              paddingTop: {
-                xl: "50px",
-                lg: "50px",
-                md: "50px",
-                sm: "50px",
-                xs: "50px",
-              },
-              columnGap: {
-                xl: "90px",
-                lg: "80px",
-                md: "80px",
-                sm: "80px",
-                xs: "30px",
-              },
-              flexWrap: "wrap",
-            }}
-          >
-            {menus.map((menu) => {
-              return (
-                <Box>
-                  <Box
-                    sx={{
-                      width: {
-                        xl: "284px",
-                        lg: "284px",
-                        md: "284px",
-                        sm: "284px",
-                        xs: "284px",
-                      },
-                      paddingTop: "20px",
-                    }}
-                  >
-                    <img src={menu.image} style={{ width: "100%" }} alt="" />
-                  </Box>
-                  <Typography
-                    sx={{
-                      fontFamily: "Poppins",
-                      fontStyle: "normal",
-                      fontWeight: "400",
-                      fontSize: {
-                        xl: "16px",
-                        lg: "16px",
-                        md: "16px",
-                        sm: "16px",
-                        xs: "18px",
-                      },
-                      lineHeight: "24px",
-                      textTransform: "capitalize",
-                      color: "#000000",
-                      paddingLeft: "5px",
-                      paddingTop: "10px",
-                    }}
-                  >
-                    {menu.type}
-                  </Typography>
-                </Box>
-              );
-            })}
-          </Box>
-        </Box>
-
+        <Menus />
         <Box>
           <Typography
             sx={{
@@ -570,6 +402,7 @@ const DetailView = () => {
                         },
                         rowGap: "10px",
                         paddingTop: "50px",
+                        overflowX: "scroll",
                       }}
                     >
                       {pizzaData.types.map((types) => {
@@ -619,7 +452,7 @@ const DetailView = () => {
                             lg: "677px",
                             md: "677px",
                             sm: "677px",
-                            xs: "387px",
+                            xs: "300px",
                           },
                           marginTop: {
                             xl: "370px",
@@ -706,9 +539,9 @@ const DetailView = () => {
                                 width: {
                                   xl: "155px",
                                   lg: "160px",
-                                  md: "143px",
+                                  md: "160px",
                                   sm: "173px",
-                                  xs: "250px",
+                                  xs: "243px",
                                 },
                               }}
                             >
@@ -727,7 +560,7 @@ const DetailView = () => {
                                   fontSize: {
                                     xl: "18px",
                                     lg: "18px",
-                                    md: "18px",
+                                    md: "16px",
                                     sm: "16px",
                                     xs: "14px",
                                   },
@@ -753,7 +586,7 @@ const DetailView = () => {
                                   lineHeight: {
                                     xl: "36px",
                                     lg: "36px",
-                                    md: "36px",
+                                    md: "20px",
                                     sm: "20px",
                                     xs: "20px",
                                   },
@@ -827,20 +660,51 @@ const DetailView = () => {
                                       decrementItemCount(data);
                                     }}
                                     sx={{
-                                      width: "30px",
+                                      width: {
+                                        xl: "30px",
+                                        lg: "30px",
+                                        md: "30px",
+                                        sm: "30px",
+                                        xs: "20px",
+                                      },
                                       height: "35px",
                                       backgroundColor: "#F3F3F3",
                                       color: "#999999",
-                                      fontSize: "20px",
+                                      fontSize: {
+                                        xl: "20px",
+                                        lg: "20px",
+                                        md: "20px",
+                                        sm: "20px",
+                                        xs: "20px",
+                                      },
                                     }}
                                   >
                                     -
                                   </Button>
                                   <Typography
                                     sx={{
-                                      width: "48px",
-                                      height: "35px",
-                                      fontSize: "20px",
+                                      width: {
+                                        xl: "30px",
+                                        lg: "30px",
+                                        md: "30px",
+                                        sm: "30px",
+                                        xs: "25px",
+                                      },
+                                      height: {
+                                        xl: "30px",
+                                        lg: "30px",
+                                        md: "30px",
+                                        sm: "30px",
+                                        xs: "25px",
+                                      },
+                                      minHeight: "25px",
+                                      fontSize: {
+                                        xl: "20px",
+                                        lg: "20px",
+                                        md: "20px",
+                                        sm: "20px",
+                                        xs: "20px",
+                                      },
                                       textAlign: "center",
                                     }}
                                   >
@@ -851,11 +715,23 @@ const DetailView = () => {
                                       incrementItemCount(data);
                                     }}
                                     sx={{
-                                      width: "48px",
+                                      width: {
+                                        xl: "30px",
+                                        lg: "30px",
+                                        md: "30px",
+                                        sm: "30px",
+                                        xs: "20px",
+                                      },
                                       height: "35px",
                                       backgroundColor: "#F3F3F3",
                                       color: "#999999",
-                                      fontSize: "20px",
+                                      fontSize: {
+                                        xl: "20px",
+                                        lg: "20px",
+                                        md: "20px",
+                                        sm: "20px",
+                                        xs: "20px",
+                                      },
                                     }}
                                   >
                                     +
@@ -874,7 +750,7 @@ const DetailView = () => {
           </Box>
         </Box>
       </MaxWidthWrapper>
-    </>
+    </AuthComponent>
   );
 };
 

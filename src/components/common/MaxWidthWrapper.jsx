@@ -6,7 +6,7 @@ const MaxWidthWrapper = ({ children }) => {
       sx={{
         maxWidth: "1536px",
         width: {
-          xs: "90%",
+          xs: "95%",
           sm: "95%",
           md: "90%",
           lg: "90%",

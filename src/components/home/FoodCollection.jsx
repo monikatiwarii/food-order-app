@@ -4,59 +4,50 @@ import { foodCollectionImages } from "../../data/data";
 const FoodCollection = () => {
   return (
     <>
-      <Box>
-        <Grid container spacing={5}>
+      <Box
+        sx={{
+          marginTop: "150px",
+        }}
+      >
+        <Grid container spacing={{ xs: 1, md: 3 }}>
           {foodCollectionImages.map((foodImages, index) => {
             return (
-              <Grid
-                item
-                xl={4}
-                lg={4}
-                md={4}
-                sm={4}
-                xs={6}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginTop: "0px",
-                }}
-              >
-                <img
-                  style={{
-                    width: "100%",
+              <Grid item md={4} sm={4} xs={6}>
+                <Box
+                  sx={{
+                    height: {
+                      xl: "400px",
+                      lg: "400px",
+                      md: "300px",
+                      sm: "250px",
+                      xs: "150px",
+                    },
+                    backgroundImage: `url('${foodImages.image}')`,
+                    backgroundSize: "cover",
                   }}
-                  src={foodImages.image}
-                  alt=""
-                />
+                >
+                  {/* <img
+                    style={{
+                      width: "100%",
+                      opacity: "0.49",
+                      background: "rgba(0, 0, 0, 0.4)",
+                    }}
+                    src={foodImages.image}
+                    alt=""
+                  /> */}
+                </Box>
               </Grid>
             );
           })}
         </Grid>
         <Box
           sx={{
-            position: "relative",
-            top: {
-              xl: "-880px",
-              lg: "-743px",
-              md: "-526px",
-              sm: "-415px",
-              xs: "-472px",
-            },
-            width: "100%",
-            height: {
-              xl: "880px",
-              lg: "742px",
-              md: "526px",
-              sm: "414px",
-              xs: "472px",
-            },
-            opacity: "0.49",
-            backgroundColor: "#191f2c",
+            background: "rgba(0, 0, 0, 0.4)",
           }}
         ></Box>
         <Box
           sx={{
+            margin: "auto",
             position: "relative",
             width: {
               xl: "636px",
@@ -72,19 +63,12 @@ const FoodCollection = () => {
               sm: "150px",
               xs: "100px",
             },
-            left: {
-              xl: "440px",
-              lg: "375px",
-              md: "225px",
-              sm: "195px",
-              xs: "20px",
-            },
             top: {
-              xl: "-1442px",
-              lg: "-1220px",
-              md: "-875px",
-              sm: "-695px",
-              xs: "-660px",
+              xl: "-520px",
+              lg: "-520px",
+              md: "-420px",
+              sm: "-335px",
+              xs: "-280px",
             },
             background: "#F6B716",
             boxShadow: "0px 20px 25px rgba(246, 183, 22, 0.25)",

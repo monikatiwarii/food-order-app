@@ -1,4 +1,3 @@
-import "./Header.module.css";
 import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
@@ -38,7 +37,7 @@ const Header = () => {
           }}
         >
           <Link
-            to="/"
+            to="/home"
             style={{
               fontFamily: "Poppins",
               fontStyle: "normal",

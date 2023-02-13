@@ -11,29 +11,21 @@ const FoodDeliveryImage = () => {
             lg: "120px",
             md: "100px",
             sm: "100px",
-            xs: "100px",
+            xs: "80px",
           },
-          overflowX: "hidden",
+
+          backgroundImage: `url("images/Rectangle12.png")`,
+          backgroundSize: "cover",
+          width: "100%",
+          height: {
+            xl: "543px",
+            lg: "423px",
+            md: "395px",
+            sm: "250px",
+            xs: "200px",
+          },
         }}
       >
-        <Box
-          sx={{
-            width: "100%",
-            height: {
-              xl: "543px",
-              lg: "495px",
-              md: "395px",
-              sm: "325px",
-              xs: "200px",
-            },
-          }}
-        >
-          <img
-            style={{ width: "100%", height: "100%" }}
-            src="images/Rectangle12.png"
-            alt=""
-          />
-        </Box>
         <Typography
           sx={{
             position: "relative",
@@ -41,23 +33,23 @@ const FoodDeliveryImage = () => {
               xl: "595px",
               lg: "595px",
               md: "595px",
-              sm: "595px",
-              xs: "250px",
+              sm: "500px",
+              xs: "230px",
             },
             height: "144px",
             left: {
-              xl: "234px",
-              lg: "234px",
-              md: "192px",
-              sm: "120px",
-              xs: "50px",
+              xl: "200px",
+              lg: "165px",
+              md: "130px",
+              sm: "100px",
+              xs: "35px",
             },
             top: {
-              xl: "-282px",
-              lg: "-306px",
-              md: "-256px",
-              sm: "-235px",
-              xs: "-111px",
+              xl: "240px",
+              lg: "165px",
+              md: "110px",
+              sm: "95px",
+              xs: "65px",
             },
             fontFamily: "Poppins",
             fontStyle: "normal",
@@ -66,7 +58,7 @@ const FoodDeliveryImage = () => {
               xl: "48px",
               lg: "48px",
               md: "48px",
-              sm: "42px",
+              sm: "36px",
               xs: "20px",
             },
             lineHeight: {
