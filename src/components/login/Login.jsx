@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, InputAdornment, TextField } from "@mui/material";
 
 import LockIcon from "@mui/icons-material/Lock";
 import { useEffect } from "react";
@@ -116,7 +110,8 @@ const Login = () => {
               variant="outlined"
             />
           </Box>
-          <Box
+
+          <Button
             sx={{
               width: {
                 xl: "300px",
@@ -130,30 +125,25 @@ const Login = () => {
 
               backgroundColor: "#FFC300",
               marginTop: "40px",
-            }}
-          >
-            <Button
-              sx={{
-                fontFamily: "Poppins",
-                fontSize: {
-                  xl: "18px",
-                  lg: "20px",
-                  md: "20px",
-                  sm: "16px",
-                  xs: "14px",
-                },
+              fontFamily: "Poppins",
+              fontSize: {
+                xl: "18px",
+                lg: "20px",
+                md: "20px",
+                sm: "16px",
+                xs: "14px",
+              },
+              color: "#ffffff",
+              textTransform: "capitalize",
+              "&:hover": {
+                backgroundColor: "#FFC300",
                 color: "#ffffff",
-                textTransform: "capitalize",
-                "&:hover": {
-                  backgroundColor: "#FFC300",
-                  color: "#ffffff",
-                },
-              }}
-              onClick={login}
-            >
-              Login
-            </Button>
-          </Box>
+              },
+            }}
+            onClick={login}
+          >
+            Login
+          </Button>
         </Box>
       </Box>
     </>
